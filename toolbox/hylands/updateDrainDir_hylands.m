@@ -71,7 +71,7 @@ switch FlowDir
         FD.ixc=FD_mult.ixc;
         FD.fraction=FD_mult.fraction;
         FD.cellsize=FD_mult.cellsize;
-        FD.refmat=FD_mult.refmat;
+        FD.wf=FD_mult.wf;
         clear FD_mult
     case 'DInf'
         FD = FLOWobj(H1,'DInf');
@@ -82,8 +82,9 @@ dx2=FD.cellsize.^2;
 W0=GRIDobj(H1)+1;
 W0.Z(boundaryNodesAll)=0;
 DA  = flowacc(FD,W0); 
-A = GRIDobj(H1);
-A.Z = flowacc_mex(FD.ix,FD.ixc,FD.size);
+%A = GRIDobj(H1);
+%A.Z = flowacc_mex(FD.ix,FD.ixc,FD.size);
+A = flowacc(FD);
 DA=DA.*dx2;
 S = [];
 switch FlowDir

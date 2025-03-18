@@ -133,7 +133,7 @@ classdef multiFLOWobj
         ixc       % [edge attribute] topologically sorted nodes (receivers)
         fraction  % [edge attribute] fraction transfered between nodes
         cellsize  % cellsize of the grid (scalar)
-        refmat    % 3-by-2 affine transformation matrix (see makerefmat)
+        wf    % 3-by-2 affine transformation matrix (see makerefmat)
         georef    % additional information on spatial referencing
     end
     
@@ -148,7 +148,7 @@ classdef multiFLOWobj
             
             %% Multiple flow direction
             FD.cellsize = DEM.cellsize;
-            FD.refmat   = DEM.refmat;
+            FD.wf   = DEM.wf;
             FD.georef   = DEM.georef;
             FD.size     = DEM.size;
             if numel(varargin)>1
