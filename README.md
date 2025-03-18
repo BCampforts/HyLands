@@ -1,12 +1,14 @@
 # HyLands
 
+<img src= "images/HyLands.jpg" align=" center" >
+
 ## What is HyLands
-HyLands is a landscape evolution model that simultaneously runs fluvial incision, sediment transport and deep seeted landslides
+HyLands is a landscape evolution model that simultaneously runs fluvial incision, sediment transport and deep seated landslides
 ## User manual HyLands
 
 Installation: 
- - Download and extract topotoolbox from: https://github.com/wschwanghart/topotoolbox (the HyLands branch, which is the default branch on the linked repository so nothing has to be adjusted, downloaded fodler will be named: topotoolbox-HyLands by default)
- - Before working with HyLands the directories and functions must be on the search path of Matlab. Enter following code into the command line: addpath(genpath(['C:\path\to\wherever\you\extracted\this\topotoolbox-HyLands']));
+ - Download and install TopoToolbox 3
+ - Before working with HyLands the directories and functions must be on the search path of Matlab. Download HyLands from github (https://github.com/TopoToolbox/HyLands). Next, enter following code into the command line: addpath(genpath(['C:\path\to\wherever\you\extracted\this\HyLands']));
  - to verify installation: enter: doc HYLANDS (info on the model) or doc HYLANDS_set (info on the parameter values) in the command window.
  
 Documentation: 
@@ -27,11 +29,11 @@ All the scripts can be downloaded from https://github.com/BCampforts/pub_hylands
 
 ## Requirements
 
-TTLEM/HyLands is plat-form independent and requires Matlab 2018a or higher 
+HyLands is platform independent and requires Matlab 2018a or higher 
 
 ## References
 
-When you use HyLAnds/TTLEM, please reference to this publication:
+When you use TTLEM, please reference to this publication:
 
  
   HyLands: Campforts B., Shobe M.C., et al. : HyLands 1.0: a Hybrid
