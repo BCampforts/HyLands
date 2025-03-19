@@ -267,3 +267,79 @@ parse(p,varargin{:});
 % and return
 p = p.Results;
 
+
+
+% 
+% %%
+% function p = HYLANDS_set(options)
+%     HYLANDS_set: Set parameters for HyLands
+%     Supports both struct input and name-value pairs.
+% 
+%     Convert struct input to name-value pairs if necessary
+%     if nargin == 1 && isstruct(varargin{1})
+%       varargin = namedargs2cell(varargin{1});
+%     end
+% 
+%     arguments
+%         p =[]
+%         options.TimeSpan (1,1) {mustBePositive} = 2e6
+%         options.TimeStep (1,1) {mustBeNumeric} = 50
+%         options.plotOut (1,1) logical = true
+%         options.ploteach (1,1) {mustBePositive} = 100
+%         options.plotSed (1,1) logical = true
+%         options.saveeach (1,1) {mustBePositive} = inf
+%         options.save_LS_D (1,1) logical = false
+%         options.save_LS_Data (1,1) logical = false
+%         options.fileprefix string = "HyLands_"
+%         options.resultsdir string = "HyLands_results" + filesep
+%         options.verbose (1,1) logical = true
+%         options.verbose_LS (1,1) logical = true
+% 
+%         options.BC_Type {mustBeMember(options.BC_Type, {'set_openNodes','set_VaropenNodes','Bed_Sed_Open','none'})} = 'set_VaropenNodes'
+%         options.FlowBC {mustBeMember(options.FlowBC, {'','t','b','l','r','tb','tl','tr','tbl','tbr','tblr','bl','br','lr','ul_cor','ll_cor','ur_cor','lr_cor','open'})} = 'open'
+%         options.BC_nbGhost (1,1) {mustBeEqual(options.BC_nbGhost,1)} = 1
+%         options.BC_SedDirVal (:,:) {mustBeNumeric} = 0
+%         options.BC_BedDirVal (:,:) {mustBeNumeric} = 0
+% 
+%         options.DrainDir {mustBeMember(options.DrainDir, {'variable'})} = 'variable'
+%         options.FlowDir {mustBeMember(options.FlowDir, {'single'})} = 'single'
+%         options.FlowDirHill {mustBeMember(options.FlowDirHill, {'multi','single','Dinf'})} = 'multi'
+% 
+%         options.checkMB (1,1) logical = false
+%         options.MB_lim (1,1) {mustBeNonnegative} = 10
+%         options.dispMB (1,1) logical = false
+% 
+%         options.U_type {mustBeMember(options.U_type, {'spatialVar','uniform'})} = 'uniform'
+%         options.R_base (1,1) {mustBeInRange(options.R_base,0.01,10)} = 1
+% 
+%         options.K_bed (:,:) {mustBeNonnegative} = 5e-5
+%         options.K_sed (:,:) {mustBeNonnegative} = 1e-4
+%         options.m (1,1) {mustBePositive} = 0.45
+%         options.n (1,1) {mustBePositive} = 1
+%         options.phi (1,1) {mustBeInRange(options.phi,0,10)} = 0
+%         options.H_star (1,1) {mustBeInRange(options.H_star,0,10)} = 1
+%         options.omega_cr (1,1) {mustBeInRange(options.omega_cr,0,10)} = 0
+%         options.omega_cs (1,1) {mustBeInRange(options.omega_cs,0,10)} = 0
+%         options.Ff (1,1) {mustBeInRange(options.Ff,0,1)} = 0
+%         options.V (1,1) {mustBeInRange(options.V,0,100)} = 5
+%         options.V_Lakes (1,1) {mustBeInRange(options.V_Lakes,0,100)} = 5
+% 
+%         options.Sc_fixed (1,1) {mustBeNonnegative} = 1
+%         options.rho_rock (1,1) {mustBeGreaterThanOrEqual(options.rho_rock,1000)} = 2700
+%         options.rho_soil (1,1) {mustBeGreaterThanOrEqual(options.rho_soil,1000)} = 1350
+%         options.rho_water (1,1) {mustBeEqual(options.rho_water,1000)} = 1000
+%         options.LS_Bed (1,1) logical = false
+%         options.t_LS (1,1) {mustBeNonnegative} = 500
+%         options.maxLS_Size (1,1) {mustBeNonnegative} = 1e7
+%         options.C_eff (1,1) {mustBePositive} = 1e4
+%         options.min_HillGrad (1,1) {mustBeNonnegative} = 0
+%         options.Ff_Hill (1,1) {mustBeInRange(options.Ff_Hill,0,1)} = 0
+% 
+%         options.s_year (1,1) {mustBeEqual(options.s_year,31557600)} = 31557600
+%         options.grav_earth (1,1) {mustBeEqual(options.grav_earth,9.807)} = 9.807
+%     end
+%     p = options
+% 
+% end
+
+
